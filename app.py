@@ -20,12 +20,9 @@ def load_questions():
     pass
 
 def play(trivia_data):
-    num_questions = 10
+    questions = random.sample(trivia_data, 10)
 
-    while num_questions > 0:
-        q = random.sample(trivia_data, 1)[0] #still repeats questions
-
-        
+    for q in questions: 
         answer_choices = []
         answer_choices.extend(q.get('incorrect')) #gets a list of strings
         answer_choices.append(q.get('correct')) #gets a string
@@ -39,26 +36,28 @@ def play(trivia_data):
 
         if answer_index <= len(answer_choices)-1: 
             if answer_choices[answer_index] == q.get('correct'):
-                print("You got it")
+                print("You got it! The answer is " + q.get('correct'))
             else:
-                print("Wrong")
+                print("Wrong, the answer is " + q.get('correct'))
         else:
             print("That's not a valid answer.")
 
-        num_questions -= 1
+        
+        
+        
+        
+# if answer == 'q':
+#     playing = False
 
-        # if answer == 'q':
-        #     playing = False
 
-
-        # Tests
-        # In a website address bar, what does WWW stand for?
-        # 0. Wild Wild West
-        # 1. World Wide Web
-        # 2. War World Web
-        # 3
-        # Traceback (most recent call last):
-        # File "<stdin>", line 1, in <module>
-        # File "app.py", line 40, in play
-        #     if answer_choices[answer_index] == q.get('correct'):
-        # IndexError: list index out of range
+# Tests
+# In a website address bar, what does WWW stand for?
+# 0. Wild Wild West
+# 1. World Wide Web
+# 2. War World Web
+# 3
+# Traceback (most recent call last):
+# File "<stdin>", line 1, in <module>
+# File "app.py", line 40, in play
+#     if answer_choices[answer_index] == q.get('correct'):
+# IndexError: list index out of range
