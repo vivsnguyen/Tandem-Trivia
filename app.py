@@ -21,6 +21,7 @@ def load_questions():
 
 def play(trivia_data):
     questions = random.sample(trivia_data, 10)
+    score = 0
 
     for q in questions: 
         answer_choices = []
@@ -37,10 +38,13 @@ def play(trivia_data):
         if answer_index <= len(answer_choices)-1: 
             if answer_choices[answer_index] == q.get('correct'):
                 print("You got it! The answer is " + q.get('correct'))
+                score += 1
             else:
                 print("Wrong, the answer is " + q.get('correct'))
         else:
             print("That's not a valid answer.")
+
+    print("Your score is: " + str(score))
 
         
         

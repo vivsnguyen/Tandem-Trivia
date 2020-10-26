@@ -13,6 +13,8 @@
 
 ## <a name="features"></a>Features
 
+#### Randomized answer choices
+Answers are shown in a random order using random.shuffle.
 
 ## <a name="installation"></a>Installation
 To run Trivia Trainer on your own machine:
