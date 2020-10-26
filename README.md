@@ -1,4 +1,4 @@
-# Trivia Training app
+# Trivia Trainer app
 * Tandem Software Engineer Apprenticeship Code Challenge
 
 ## Contents
@@ -15,9 +15,28 @@
 
 
 ## <a name="installation"></a>Installation
-To run this app on your own machine:
+To run Trivia Trainer on your own machine:
 
 Clone or fork this repo:
 ```
 https://github.com/vivsnguyen/Tandem-Trivia.git
 ```
+
+Create and activate a virtual environment inside your Trivia Trainer directory:
+```
+virtualenv env
+source env/bin/activate
+```
+
+Install the dependencies:
+```
+pip install -r requirements.txt
+```
+
+Run the app:
+
+```
+python3.6 app.py
+```
+
+You can now navigate to 'localhost:5000/' to access Trivia Trainer.
