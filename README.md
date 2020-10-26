@@ -1,5 +1,5 @@
 # Trivia Training app
-# Tandem Software Engineer Apprenticeship Code Challenge
+* Tandem Software Engineer Apprenticeship Code Challenge
 
 ## Contents
 * [Tech Stack](#tech-stack)
