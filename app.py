@@ -3,9 +3,9 @@
 import json
 import random
 
-file_name = 'Apprentice_TandemFor400_Data.json'
+tandem_file = 'Apprentice_TandemFor400_Data.json'
 
-def get_data_from_json():
+def get_data_from_json(file_name):
     with open(file_name) as file:
         trivia_data = json.load(file)
     return trivia_data
@@ -19,8 +19,18 @@ def load_questions():
     """
     pass
 
+def select_random_questions(data, num_questions):
+    """
+    Select random questions from given data.
+
+    Input
+    data : list of dicts
+    num_questions : int number of questions to be selected
+    """
+    return random.sample(data, num_questions)
+
 def play(trivia_data):
-    questions = random.sample(trivia_data, 10)
+    questions = select_random_questions(trivia_data, 10)
     score = 0
 
     for q in questions: 
@@ -37,16 +47,18 @@ def play(trivia_data):
 
         if answer_index <= len(answer_choices)-1: 
             if answer_choices[answer_index] == q.get('correct'):
-                print("You got it! The answer is " + q.get('correct'))
+                print("You got it! The answer is " + q.get('correct') + "\n")
                 score += 1
             else:
-                print("Wrong, the answer is " + q.get('correct'))
+                print("Wrong, the answer is " + q.get('correct') + "\n")
         else:
             print("That's not a valid answer.")
 
     print("Your score is: " + str(score))
 
-        
+data = get_data_from_json(tandem_file)
+play(data)
+
         
         
         
