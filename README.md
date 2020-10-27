@@ -11,6 +11,7 @@
 
 ## <a name="tech-stack"></a>Technologies
 * Python
+* Javascript
 
 
 ## <a name="features"></a>Features
@@ -46,3 +47,11 @@ python3.6 app.py
 ```
 
 You can now navigate to 'localhost:5000/' to access Trivia Trainer.
+
+## <a name="resources"></a>Resources
+### Back End
+* Deciding how to store data
+    * [Making a quiz, how do I store the questions?](https://stackoverflow.com/questions/35588826/making-a-quiz-how-do-i-store-the-questions)
+
+### Front End
+* [Build A Quiz App With JavaScript](https://youtu.be/riDzcEQbX6k)
