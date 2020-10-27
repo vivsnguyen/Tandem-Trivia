@@ -1,5 +1,6 @@
 # Trivia Trainer app
 * Tandem Software Engineer Apprenticeship Code Challenge
+* One week sprint to build and deploy
 
 ## Contents
 * [Tech Stack](#tech-stack)
