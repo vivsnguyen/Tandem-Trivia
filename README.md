@@ -5,6 +5,7 @@
 * [Tech Stack](#tech-stack)
 * [Features](#features)
 * [Future Features](#future)
+* [Testing](#testing)
 * [Installation](#installation)
 
 ## <a name="tech-stack"></a>Technologies
@@ -15,6 +16,8 @@
 
 #### Randomized answer choices
 Answers are shown in a random order using random.shuffle.
+
+## <a name="testing"></a>Testing
 
 ## <a name="installation"></a>Installation
 To run Trivia Trainer on your own machine:
