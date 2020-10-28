@@ -4,6 +4,9 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
+let questions = getQuestions();
+// just getQuestions in startGame -> questions = undefined
+let currentQuestionIndex;
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -11,50 +14,52 @@ nextButton.addEventListener('click', () => {
     setNextQuestion();
 });
 
-let shuffledQuestions, currentQuestionIndex;
-
-let questions;
+function getQuestions() {
+    $.get('/questions.json', (res) => {
+        questions = res;
+      });
+}
 
 function startGame() {
     console.log('Started');
     startButton.classList.add('hide');
     getQuestions();
-    // shuffledQuestions = questions.sort(() => Math.random - .5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
-    // setNextQuestion();
-}
-
-function getQuestions() {
-    $.get('/questions.json', (res) => {
-        questions = res;
-        // turns into a string, can't parse
-        console.log(`Answer: ${JSON.stringify(questions[0].correct)}`);
-
-        console.log(`this is the questions[0]: ${questions[0].question}`)
-        console.log(questions);
-      });
+    setNextQuestion();
 }
 
 function setNextQuestion() {
-    resetState();
-    // showQuestion(shuffledQuestions[currentQuestionIndex]);
+    // resetState();
+    setAnswerChoices(questions[currentQuestionIndex]);
     showQuestion(questions[currentQuestionIndex]);
+}
 
+function setAnswerChoices(question) {
+    let answerChoices = [];
+
+    // Concat returns a copy of the new array
+    answerChoices = answerChoices.concat(question.incorrect, question.correct);
+    
+    answerChoices.sort(() => Math.random() - 0.5);
+    // check randomness
+
+    question['answerChoices'] = answerChoices;
 }
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-    // question.answers.forEach(answer => {
-    //     const button = document.createElement('button');
-    //     button.innerText = answer.text;
-    //     button.classList.add('btn');
-    //     if (answer.correct) {
-    //         button.dataset.correct = answer.correct;
-    //     }
-    //     button.addEventListener('click', selectAnswer);
-    //     answerButtonsElement.appendChild(button);
-    // })
+
+    question.answer.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+    })
 }
 
 // function resetState() {
