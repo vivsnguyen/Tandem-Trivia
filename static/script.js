@@ -37,27 +37,24 @@ function setNextQuestion() {
 
 function setAnswerChoices(question) {
     let answerChoices = [];
-
     // Concat returns a copy of the new array
     answerChoices = answerChoices.concat(question.incorrect, question.correct);
-    
     answerChoices.sort(() => Math.random() - 0.5);
     // check randomness
-
     question['answerChoices'] = answerChoices;
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
 
-    question.answer.forEach(answer => {
+    question.answerChoices.forEach(answer => {
         const button = document.createElement('button');
-        button.innerText = answer.text;
+        button.innerText = answer;
         button.classList.add('btn');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
+        // if (answer.correct) {
+        //     button.dataset.correct = answer.correct;
+        // }
+        // button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     })
 }
