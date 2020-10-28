@@ -8,10 +8,15 @@
 * [Future Features](#future)
 * [Testing](#testing)
 * [Installation](#installation)
+* [Future Features](#future-features)
+* [Resources](#resources)
 
 ## <a name="tech-stack"></a>Technologies
 * Python
+* Flask
 * Javascript
+* jQuery, AJAX
+* Bootstrap
 
 
 ## <a name="features"></a>Features
@@ -47,6 +52,8 @@ python3.6 app.py
 ```
 
 You can now navigate to 'localhost:5000/' to access Trivia Trainer.
+
+## <a name="future-features"></a>Future Features
 
 ## <a name="resources"></a>Resources
 ### Back End

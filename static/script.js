@@ -30,7 +30,7 @@ function startGame() {
 }
 
 function setNextQuestion() {
-    // resetState();
+    resetState();
     setAnswerChoices(questions[currentQuestionIndex]);
     showQuestion(questions[currentQuestionIndex]);
 }
@@ -51,50 +51,53 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer;
         button.classList.add('btn');
-        // if (answer.correct) {
-        //     button.dataset.correct = answer.correct;
-        // }
-        // button.addEventListener('click', selectAnswer);
+        if (answer === question.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     })
 }
 
-// function resetState() {
-//     clearStatusClass(document.body);
-//     nextButton.classList.add('hide');
-//     while (answerButtonsElement.firstChild) {
-//         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-//     }
-// }
+function resetState() {
+    clearStatusClass(document.body); 
+    // for color of page
 
-// function selectAnswer(evt) {
-//     const selectedButton = evt.target;
-//     const correct = selectedButton.dataset.correct;
-//     setStatusClass(document.body, correct);
-//     Array.from(answerButtonsElement.children).forEach(button => {
-//         setStatusClass(button, button.dataset.correct);
-//     })
-//     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-//         nextButton.classList.remove('hide');
-//     } else {
-//         startButton.innerText = 'Restart';
-//         startButton.classList.remove('hide');
-//     }
-// }
+    nextButton.classList.add('hide');
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+    }
+}
 
-// function setStatusClass(element, correct) {
-//     clearStatusClass(element)
-//     if (correct) {
-//         element.classList.add('correct');
-//     } else {
-//         element.classList.add('wrong');
-//     }
-// }
+function selectAnswer(evt) {
+    const selectedButton = evt.target;
+    const correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct);
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+    })
+    if (questions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
+    } else {
+        alert("Game Over!");
+        startButton.innerText = 'Restart';
+        startButton.classList.remove('hide');
+    }
+}
 
-// function clearStatusClass(element) {
-//     element.classList.remove('correct');
-//     element.classList.remove('wrong');
-// }
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+}
 
 // const questions = [
 //     {
