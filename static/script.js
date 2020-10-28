@@ -13,23 +13,24 @@ nextButton.addEventListener('click', () => {
 
 let shuffledQuestions, currentQuestionIndex;
 
+let questions = [];
+
 function startGame() {
     console.log('Started');
     startButton.classList.add('hide');
+    getQuestions();
     // shuffledQuestions = questions.sort(() => Math.random - .5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     // setNextQuestion();
 }
 
-$(startButton).on('click', (evt) => {
-    evt.preventDefault();
-
+function getQuestions() {
     $.get('/questions.json', (res) => {
-      console.log(`Question: ${JSON.stringify(res[0])}`);
-      console.log(`Answer: ${JSON.stringify(res[0].correct)}`);
-    });
-  });
+        console.log(`Question: ${JSON.stringify(res[0])}`);
+        console.log(`Answer: ${JSON.stringify(res[0].correct)}`);
+      });
+}
 
 // function setNextQuestion() {
 //     resetState();
@@ -87,19 +88,19 @@ $(startButton).on('click', (evt) => {
 //     element.classList.remove('wrong');
 // }
 
-const questions = [
-    {
-        question: 'What is 2 + 2?',
-        answers: [
-            { 'text': '4', 'correct': true },
-            { 'text': '22', 'correct': false }
-        ]
-    },
-    {
-        question: 'What is 2 * 6?',
-        answers: [
-            { 'text': '12', 'correct': true },
-            { 'text': '22', 'correct': false }
-        ]
-    }
-]
+// const questions = [
+//     {
+//         question: 'What is 2 + 2?',
+//         answers: [
+//             { 'text': '4', 'correct': true },
+//             { 'text': '22', 'correct': false }
+//         ]
+//     },
+//     {
+//         question: 'What is 2 * 6?',
+//         answers: [
+//             { 'text': '12', 'correct': true },
+//             { 'text': '22', 'correct': false }
+//         ]
+//     }
+// ]
