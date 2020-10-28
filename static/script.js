@@ -13,7 +13,7 @@ nextButton.addEventListener('click', () => {
 
 let shuffledQuestions, currentQuestionIndex;
 
-let questions = [];
+let questions;
 
 function startGame() {
     console.log('Started');
@@ -27,29 +27,35 @@ function startGame() {
 
 function getQuestions() {
     $.get('/questions.json', (res) => {
-        console.log(`Question: ${JSON.stringify(res[0])}`);
-        console.log(`Answer: ${JSON.stringify(res[0].correct)}`);
+        questions = res;
+        // turns into a string, can't parse
+        console.log(`Answer: ${JSON.stringify(questions[0].correct)}`);
+
+        console.log(`this is the questions[0]: ${questions[0].question}`)
+        console.log(questions);
       });
 }
 
-// function setNextQuestion() {
-//     resetState();
-//     showQuestion(shuffledQuestions[currentQuestionIndex]);
-// }
+function setNextQuestion() {
+    resetState();
+    // showQuestion(shuffledQuestions[currentQuestionIndex]);
+    showQuestion(questions[currentQuestionIndex]);
 
-// function showQuestion(question) {
-//     questionElement.innerText = question.question
-//     question.answers.forEach(answer => {
-//         const button = document.createElement('button');
-//         button.innerText = answer.text;
-//         button.classList.add('btn');
-//         if (answer.correct) {
-//             button.dataset.correct = answer.correct;
-//         }
-//         button.addEventListener('click', selectAnswer);
-//         answerButtonsElement.appendChild(button);
-//     })
-// }
+}
+
+function showQuestion(question) {
+    questionElement.innerText = question.question
+    // question.answers.forEach(answer => {
+    //     const button = document.createElement('button');
+    //     button.innerText = answer.text;
+    //     button.classList.add('btn');
+    //     if (answer.correct) {
+    //         button.dataset.correct = answer.correct;
+    //     }
+    //     button.addEventListener('click', selectAnswer);
+    //     answerButtonsElement.appendChild(button);
+    // })
+}
 
 // function resetState() {
 //     clearStatusClass(document.body);
