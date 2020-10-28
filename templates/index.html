@@ -16,7 +16,23 @@
 </head>
 <body>
     <div class="container">
+        <form id='form-result' class="hide" action="">
+            <div class="SP-container">
+                <div class="modal-text modal-text-bigger">Round complete!</div>
+                <div class="modal-text">Your score:</div>
+
+                <!-- 4. here's where we show right answers: span id="right-answers" -->
+                <div class="modal-text"><span id="right-answers" class="count"> 12 </span> of <span id="all-questions" class="count">count-of-questions</span> (<span id="answers-percent"></span>%)</div> 
+            </div>
+        </form>
+
         <div id="question-container" class="hide">
+            <div class="number-of-question-text">
+                Question № 
+                <span id="current-question">YYY</span> 
+                of 
+                <span id="all-questions2">XXX</span>
+            </div>
             <div id="question">Question</div>
             <div id="answer-buttons" class="btn-grid">
                 <button class="btn">Answer 1</button>
@@ -24,6 +40,7 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
+            <div id="answer-result" class="hide"></div>
         </div>
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>

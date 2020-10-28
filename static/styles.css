@@ -21,13 +21,13 @@ body {
     background-color: hsl(var(--hue), 100%, 20%);
 }
 
-body.correct {
+/* body.correct {
     --hue: var(--hue-correct);
 }
 
 body.wrong {
     --hue: var(--hue-wrong);
-}
+} */
 
 .container {
     width: 800px;
@@ -82,4 +82,9 @@ body.wrong {
 
 .hide {
     display: none;
+}
+
+/*Prevent multiclicking the buttons*/
+.no-click {
+    pointer-events: none;
 }

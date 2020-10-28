@@ -1,17 +1,28 @@
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
+
+const answerResultElement = document.getElementById('answer-result');
+
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
+const resultForm = document.getElementById('form-result');
+
+let correctAnswersCount = 0;
 let questions = getQuestions();
 // just getQuestions in startGame -> questions = undefined
 let currentQuestionIndex;
+let currentQuestion = 1;
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
+    answerButtonsElement.classList.remove('no-click'); 
     currentQuestionIndex++;
     setNextQuestion();
+
+    currentQuestion++; 
+    document.getElementById('current-question').innerHTML = currentQuestion;
 });
 
 function getQuestions() {
@@ -22,10 +33,25 @@ function getQuestions() {
 
 function startGame() {
     console.log('Started');
+
     startButton.classList.add('hide');
+    resultForm.classList.add('hide');
+
     getQuestions();
+
     currentQuestionIndex = 0;
+
+    currentQuestion = 1;
+    document.getElementById('current-question').innerHTML = currentQuestion;
+    
+    correctAnswersCount = 0;
+
     questionContainerElement.classList.remove('hide');
+    answerButtonsElement.classList.remove('no-click'); 
+
+    document.getElementById('all-questions2').innerHTML = questions.length;
+    document.getElementById('all-questions').innerHTML = questions.length;
+
     setNextQuestion();
 }
 
@@ -64,6 +90,7 @@ function resetState() {
     // for color of page
 
     nextButton.classList.add('hide');
+    answerResultElement.classList.add('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -72,7 +99,9 @@ function resetState() {
 function selectAnswer(evt) {
     const selectedButton = evt.target;
     const correct = selectedButton.dataset.correct;
+
     setStatusClass(document.body, correct);
+    
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     })
@@ -80,9 +109,24 @@ function selectAnswer(evt) {
         nextButton.classList.remove('hide');
     } else {
         alert("Game Over!");
+
+        // end result page
+        resultForm.classList.remove('hide');
+        questionContainerElement.classList.add('hide');
+
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
     }
+
+    if (selectedButton.dataset = correct) {
+        correctAnswersCount++; 
+    }
+
+    //5. to show the score inside <span>
+    document.getElementById('right-answers').innerHTML = correctAnswersCount; 
+    document.getElementById('answers-percent').innerHTML = ((100 * correctAnswersCount)/questions.length).toFixed(0);
+    //prevent multiclicking 
+    document.getElementById('answer-buttons').classList.add('no-click');
 }
 
 function setStatusClass(element, correct) {
