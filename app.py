@@ -1,4 +1,4 @@
-from flask import (Flask, render_template, redirect, request, flash, session)
+from flask import (Flask, render_template, redirect, request, flash, session, jsonify)
 from flask_debugtoolbar import DebugToolbarExtension
 
 import trivia
@@ -14,10 +14,13 @@ def index():
     return render_template('index.html')
 
 @app.route("/questions.json")
-def get_questions():
-    """Return JSON of questions."""
+def get_set_of_questions():
+    """Return JSON of 10 randomly selected questions."""
+    data = trivia.get_data_from_json(tandem_file)
+    questions = trivia.select_random_questions(data, 10)
 
-    return tandem_file
+    return jsonify(questions)
+
 
 #??????
 @app.route("/start-game", methods=["GET"])
