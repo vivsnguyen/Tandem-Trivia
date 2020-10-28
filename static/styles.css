@@ -30,7 +30,9 @@ body.wrong {
 }
 
 .container {
-    width: 800px;
+    width: 50%;
+    /* how big the box is  */
+
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
