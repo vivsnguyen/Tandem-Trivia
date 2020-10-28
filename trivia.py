@@ -54,8 +54,9 @@ def play(trivia_data):
 
     print("Your score is: " + str(score))
 
-data = get_data_from_json(tandem_file)
-play(data)
+def start_game():
+    data = get_data_from_json(tandem_file)
+    play(data)
 
         
         
