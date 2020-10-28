@@ -10,10 +10,10 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 const resultForm = document.getElementById('form-result');
 
 let correctAnswersCount = 0;
-let questions = getQuestions();
-// just getQuestions in startGame -> questions = undefined
 let currentQuestionIndex;
 let currentQuestion = 1;
+
+let questions = getQuestions();
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {

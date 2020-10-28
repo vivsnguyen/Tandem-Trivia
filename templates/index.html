@@ -17,14 +17,19 @@
 
     <title>Trivia Trainer</title>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Tandem Trivia Trainer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
     <div class="container">
         <form id='form-result' class="hide" action="">
-            <div class="SP-container">
-                <div class="modal-text modal-text-bigger">Round complete!</div>
-                <div class="modal-text">Your score:</div>
-
-                <!-- 4. here's where we show right answers: span id="right-answers" -->
+            <div class="score-container">
+                <div>Round complete!</div>
+                <div>Your score:</div>
                 <div class="modal-text"><span id="right-answers" class="count"> 12 </span> of <span id="all-questions" class="count">count-of-questions</span> (<span id="answers-percent"></span>%)</div> 
             </div>
         </form>
