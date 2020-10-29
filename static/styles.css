@@ -70,6 +70,10 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
+.btn.chosen {
+    background-color: grey;
+}
+
 .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
@@ -94,6 +98,6 @@ body.wrong {
 .img-responsive {
     height: auto;
     width: auto;
-    max-height: 54px;
-    max-width: 187px;
+    max-height: 72px;
+    max-width: 250px;
 }

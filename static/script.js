@@ -65,8 +65,8 @@ function setAnswerChoices(question) {
     let answerChoices = [];
     // Concat returns a copy of the new array
     answerChoices = answerChoices.concat(question.incorrect, question.correct);
+    
     answerChoices.sort(() => Math.random() - 0.5);
-    // check randomness
     question['answerChoices'] = answerChoices;
 }
 
@@ -103,13 +103,14 @@ function selectAnswer(evt) {
     setStatusClass(document.body, correct);
     
     Array.from(answerButtonsElement.children).forEach(button => {
+        if (!(selectedButton.dataset = correct)) {
+            selectedButton.classList.add('chosen');
+        }
         setStatusClass(button, button.dataset.correct);
     })
     if (questions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        alert("Game Over!");
-
         // end result page
         resultForm.classList.remove('hide');
         questionContainerElement.classList.add('hide');
@@ -118,13 +119,15 @@ function selectAnswer(evt) {
         startButton.classList.remove('hide');
     }
 
+    // why just one equals works ???
     if (selectedButton.dataset = correct) {
         correctAnswersCount++; 
     }
 
-    //5. to show the score inside <span>
+    // show score at the end
     document.getElementById('right-answers').innerHTML = correctAnswersCount; 
     document.getElementById('answers-percent').innerHTML = ((100 * correctAnswersCount)/questions.length).toFixed(0);
+    
     //prevent multiclicking 
     document.getElementById('answer-buttons').classList.add('no-click');
 }
@@ -141,21 +144,6 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+    
+    element.classList.remove('chosen');
 }
-
-// const questions = [
-//     {
-//         question: 'What is 2 + 2?',
-//         answers: [
-//             { 'text': '4', 'correct': true },
-//             { 'text': '22', 'correct': false }
-//         ]
-//     },
-//     {
-//         question: 'What is 2 * 6?',
-//         answers: [
-//             { 'text': '12', 'correct': true },
-//             { 'text': '22', 'correct': false }
-//         ]
-//     }
-// ]
