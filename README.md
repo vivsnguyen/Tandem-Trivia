@@ -45,7 +45,6 @@ Users click to select an answer. After selecting, the button with the correct an
 ![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/incorrect-answer.gif "Selecting an incorrect answer")
 Selecting an incorrect answer
 
-
 ![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/correct-answer.gif "Selecting a correct answer")
 Selecting a correct answer
 
@@ -104,13 +103,7 @@ I tried to include certain features such as high contrast buttons, but would lov
 I want users to be able to save questions, view scores, and add their own questions to the trivia question bank. This is why I decided to send the question data to the front-end through the server. Later on, I would want to store the questions in a database.
 
 * #### More testing
-Integration tests
-Integration Testing Flask App
-Test server
-“End-to-End” Testing
-
-Test front end, javascript
-
+I want to add more testing, such as integration tests for my flask server and testing for my front end features.
 
 ## <a name="resources"></a>Resources
 ### Back End
