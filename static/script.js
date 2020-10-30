@@ -8,6 +8,7 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
 const resultForm = document.getElementById('form-result');
+const welcomeText = document.getElementById('welcome-text');
 
 let correctAnswersCount = 0;
 let currentQuestionIndex;
@@ -34,10 +35,12 @@ function getQuestions() {
 function startGame() {
     console.log('Started');
 
+    welcomeText.classList.add('hide');
     startButton.classList.add('hide');
     resultForm.classList.add('hide');
 
     getQuestions();
+    console.log(questions);
 
     currentQuestionIndex = 0;
 
@@ -120,8 +123,7 @@ function selectAnswer(evt) {
         startButton.classList.remove('hide');
     }
 
-    // why just one equals works ???
-    if (selectedButton.dataset = correct) {
+    if (correct) {
         correctAnswersCount++; 
     }
 

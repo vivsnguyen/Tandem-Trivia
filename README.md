@@ -6,11 +6,11 @@
 * [Tech Stack](#tech-stack)
 * [Challenge Criteria](#challenge-criteria)
 * [Features](#features)
-* [Future Features](#future)
-* [Testing](#testing)
 * [Installation](#installation)
+* [Testing](#testing)
 * [Future Features](#future-features)
 * [Resources](#resources)
+* [Thanks](#thanks)
 
 ## <a name="tech-stack"></a>Technologies
 * Python
@@ -18,6 +18,7 @@
 * Javascript
 * jQuery, AJAX
 * Bootstrap
+
 
 ## <a name="challenge-criteria"></a>Challenge Criteria
 * A user can view questions.
@@ -34,9 +35,6 @@ Answers are shown in a random order using random.shuffle.
 #### New Random Questions on Game Restart
 
 #### Answer highlighting by color
-
-
-## <a name="testing"></a>Testing
 
 ## <a name="installation"></a>Installation
 To run Trivia Trainer on your own machine:
@@ -65,6 +63,16 @@ python3.6 app.py
 
 You can now navigate to 'localhost:5000/' to access Trivia Trainer.
 
+## <a name="testing"></a>Testing
+
+#### Doctests
+I used Doctests to test trivia.py.
+
+To run Doctests, navigate to the Trivia Trainer directory and in your terminal run:
+```
+python3 -m doctest -v tests.txt
+```
+
 ## <a name="future-features"></a>Future Features
 
 * #### Improved accessibility
@@ -72,6 +80,11 @@ I tried to include certain features such as high contrast buttons, but would lov
 
 * #### User Features
 I want users to be able to save questions, view scores, and add their own questions to the trivia question bank. This is why I decided to send the question data to the front-end through the server. Later on, I would want to store the questions in a database.
+
+* #### More testing
+Integration tests
+Integration Testing Flask App
+“End-to-End” Testing
 
 
 ## <a name="resources"></a>Resources
@@ -81,3 +94,5 @@ I want users to be able to save questions, view scores, and add their own questi
 
 ### Front End
 * [Build A Quiz App With JavaScript](https://youtu.be/riDzcEQbX6k)
+
+## <a name="thanks"></a>Thanks

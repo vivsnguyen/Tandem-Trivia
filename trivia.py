@@ -58,12 +58,6 @@ def start_game():
     data = get_data_from_json(tandem_file)
     play(data)
 
-        
-        
-        
-# if answer == 'q':
-#     playing = False
-
 
 # Tests
 # In a website address bar, what does WWW stand for?

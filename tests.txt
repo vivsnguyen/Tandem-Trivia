@@ -16,3 +16,14 @@ This is for select_random_questions()::
     >>> questions[0] in test_dict
     True
 
+This is for get_data_from_json()::
+
+    >>> test_json = 'test.json'
+
+    >>> trivia.get_data_from_json(test_json)
+    [{'info': 'text'}, {'hello': 'hi'}, {'testing': 'working'}]
+
+    >>> data = trivia.get_data_from_json(test_json)
+    >>> type(data)
+    <class 'list'>
+

@@ -29,6 +29,14 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
+h1 {
+    color: olive;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
 .container {
     width: 50%;
     /* how big the box is  */

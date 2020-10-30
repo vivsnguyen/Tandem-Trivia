@@ -26,11 +26,32 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">User Login</a>
+            </li>
+          </ul>
     </nav>
 
-    <div class="container"">Welcome!</div>
-
     <div class="container"> 
+        <div id="quiz-title">
+            <h1>Tandem for 400!</h1>
+        </div>
+        <div id="welcome-text">
+            <h4>Welcome to Tandem Trivia Trainer!</h3> Trivia is a great way to learn and to have fun. 
+            However, we all know only one person can be crowned <b>trivia champion</b>. 
+            This application will help you improve your trivia skills, so that title can be yours!
+            <br><br>
+            <h4>Instructions</h4>
+            <ul>
+                <li>Each round has 10 questions.</li>
+                <li>Questions with their multiple choice options will be displayed one at a time</li>
+                <li>Click to select your answer. After selecting, the button with the correct answer will turn <span style="color:green">green</span>. 
+                    If you selected an incorrect answer, the button will turn <span style="color:grey">grey</span>. 
+                    Other incorrect answer buttons will turn <span style="color:red">red</span>.</li>
+            </ul>
+        </div>
         <div class="row">
             <div class="col">
                 <form id='form-result' class="hide" action="">
