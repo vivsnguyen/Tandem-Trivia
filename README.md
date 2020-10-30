@@ -101,7 +101,7 @@ python3 -m doctest -v tests.txt
 I tried to include certain features such as high contrast buttons, but would love to add alt-text to be read when an answer is chosen. 
 
 * #### User Features
-I want users to be able to save questions, view scores, and add their own questions to the trivia question bank. This is why I decided to send the question data to the front-end through the server. Later on, I would want to store the questions in a database.
+I want users to be able to login, save questions, view scores, and add their own questions to the trivia question bank. This is why I decided to send the question data to the front-end through the server. Later on, I would want to store the questions in a database.
 
 * #### More testing
 I want to add more testing, such as integration tests for my flask server and testing for my front end features.
