@@ -63,10 +63,11 @@ function setNextQuestion() {
 
 function setAnswerChoices(question) {
     let answerChoices = [];
-    // Concat returns a copy of the new array
+    // Concat returns a copy of the new array - all answer choices
     answerChoices = answerChoices.concat(question.incorrect, question.correct);
-    
     answerChoices.sort(() => Math.random() - 0.5);
+
+    // set question property
     question['answerChoices'] = answerChoices;
 }
 
@@ -86,8 +87,8 @@ function showQuestion(question) {
 }
 
 function resetState() {
-    clearStatusClass(document.body); 
     // for color of page
+    clearStatusClass(document.body); 
 
     nextButton.classList.add('hide');
     answerResultElement.classList.add('hide');

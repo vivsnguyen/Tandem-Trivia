@@ -4,6 +4,7 @@
 
 ## Contents
 * [Tech Stack](#tech-stack)
+* [Challenge Criteria](#challenge-criteria)
 * [Features](#features)
 * [Future Features](#future)
 * [Testing](#testing)
@@ -18,11 +19,21 @@
 * jQuery, AJAX
 * Bootstrap
 
+## <a name="challenge-criteria"></a>Challenge Criteria
+* A user can view questions.
+* Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
+* A user can select only 1 answer out of the 4 possible answers.
+* The correct answer must be revealed after a user has submitted their answer 
+* A user can see the score they received at the end of the round
 
 ## <a name="features"></a>Features
 
 #### Randomized answer choices
 Answers are shown in a random order using random.shuffle.
+
+#### Answer highlighting by color
+
+
 
 ## <a name="testing"></a>Testing
 
@@ -54,6 +65,13 @@ python3.6 app.py
 You can now navigate to 'localhost:5000/' to access Trivia Trainer.
 
 ## <a name="future-features"></a>Future Features
+
+* #### Improved accessibility
+I tried to include certain features such as high contrast buttons, but would love to add alt-text to be read when an answer is chosen. 
+
+* #### User Features
+I want users to be able to save questions, view scores, and add their own questions to the trivia question bank. This is why I decided to send the question data to the front-end through the server. Later on, I would want to store the questions in a database.
+
 
 ## <a name="resources"></a>Resources
 ### Back End
