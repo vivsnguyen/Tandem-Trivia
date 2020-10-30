@@ -31,8 +31,9 @@
 #### Randomized answer choices
 Answers are shown in a random order using random.shuffle.
 
-#### Answer highlighting by color
+#### New Random Questions on Game Restart
 
+#### Answer highlighting by color
 
 
 ## <a name="testing"></a>Testing

@@ -1,0 +1,18 @@
+This file is used to test functions in trivia.py.
+
+First, let's import it::
+
+>>> import trivia
+
+Then, let's try it out::
+
+This is for select_random_questions()::
+
+    >>> test_dict = [{'A':'a'},{'B':'b'},{'C':'c'},{'D':'d'},{'E':'e'},{'F':'f'},{'G':'g'},{'H':'h'},{'I':'i'},{'J':'j'},{'K':'k'},{'L':'l'}]
+    >>> questions = trivia.select_random_questions(test_dict, 3)
+
+    >>> type(questions[0])
+    <class 'dict'>
+    >>> questions[0] in test_dict
+    True
+

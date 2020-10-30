@@ -27,34 +27,41 @@
           <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <div class="container">
-        <form id='form-result' class="hide" action="">
-            <div class="score-container">
-                <div>Round complete!</div>
-                <div>Your score:</div>
-                <div class="modal-text"><span id="right-answers" class="count"> 12 </span> of <span id="all-questions" class="count">count-of-questions</span> (<span id="answers-percent"></span>%)</div> 
-            </div>
-        </form>
 
-        <div id="question-container" class="hide">
-            <div class="number-of-question-text">
-                Question № 
-                <span id="current-question">YYY</span> 
-                of 
-                <span id="all-questions2">XXX</span>
+    <div class="container"">Welcome!</div>
+
+    <div class="container"> 
+        <div class="row">
+            <div class="col">
+                <form id='form-result' class="hide" action="">
+                    <div class="score-container">
+                        <div>Round complete!</div>
+                        <div>Your score:</div>
+                        <div class="modal-text"><span id="right-answers" class="count"> 12 </span> of <span id="all-questions" class="count">count-of-questions</span> (<span id="answers-percent"></span>%)</div> 
+                    </div>
+                </form>
+
+                <div id="question-container" class="hide">
+                    <div class="number-of-question-text">
+                        Question № 
+                        <span id="current-question">YYY</span> 
+                        of 
+                        <span id="all-questions2">XXX</span>
+                    </div>
+                    <div id="question">Question</div>
+                    <div id="answer-buttons" class="btn-grid">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
+                    <div id="answer-result" class="hide"></div>
+                </div>
+                <div class="controls">
+                    <button id="start-btn" class="start-btn btn">Start</button>
+                    <button id="next-btn" class="next-btn btn hide">Next</button>
+                </div>
             </div>
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-            <div id="answer-result" class="hide"></div>
-        </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
     </div>
 </body>
