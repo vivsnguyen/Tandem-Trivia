@@ -30,11 +30,23 @@
 ## <a name="features"></a>Features
 
 #### Randomized answer choices
-Answers are shown in a random order using random.shuffle.
+Incorrect and correct answers are combined into one array and then randomized.
+Code for this can be found in /static/script.js.
 
-#### New Random Questions on Game Restart
+#### Current question number
+The current question number is always visible, so users can keep track of the currect question number they are on.
 
 #### Answer highlighting by color
+Users click to select an answer. After selecting, the button with the correct answer will turn green. If an incorrect answer is selected, the selected button will turn grey. Other incorrect answer buttons will turn red.
+
+here for correct/incorrect gifs
+
+#### Final score display
+After 10 questions are completed, users can view their score percentage and restart the quiz.
+
+#### New random questions when game restarts
+New questions are chosen randomly using random.sample. This function specifically samples without replacement, so no questions are repeated in a round.
+Code for this can be found in trivia.py.
 
 ## <a name="installation"></a>Installation
 To run Trivia Trainer on your own machine:
@@ -84,7 +96,10 @@ I want users to be able to save questions, view scores, and add their own questi
 * #### More testing
 Integration tests
 Integration Testing Flask App
+Test server
 “End-to-End” Testing
+
+Test front end, javascript
 
 
 ## <a name="resources"></a>Resources
@@ -94,5 +109,9 @@ Integration Testing Flask App
 
 ### Front End
 * [Build A Quiz App With JavaScript](https://youtu.be/riDzcEQbX6k)
+* MDN Web Docs
+
+### Screenrecording
+* Kap
 
 ## <a name="thanks"></a>Thanks
