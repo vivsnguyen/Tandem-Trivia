@@ -1,3 +1,5 @@
+# <img src="https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/logo.png" width="40%" alt="Trivia Trainer logo">
+
 # Trivia Trainer app
 * Tandem Software Engineer Apprenticeship Code Challenge
 * One week sprint to build and deploy
@@ -28,6 +30,7 @@
 * A user can see the score they received at the end of the round
 
 ## <a name="features"></a>Features
+![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/home.gif "Trivia Trainer main homepage")
 
 #### Randomized answer choices
 Incorrect and correct answers are combined into one array and then randomized.
@@ -39,7 +42,8 @@ The current question number is always visible, so users can keep track of the cu
 #### Answer highlighting by color
 Users click to select an answer. After selecting, the button with the correct answer will turn green. If an incorrect answer is selected, the selected button will turn grey. Other incorrect answer buttons will turn red.
 
-here for correct/incorrect gifs
+![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/incorrect-answer.gif "Selecting an incorrect answer")
+![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/correct-answer.gif "Selecting a correct answer")
 
 #### Final score display
 After 10 questions are completed, users can view their score percentage and restart the quiz.
@@ -47,6 +51,8 @@ After 10 questions are completed, users can view their score percentage and rest
 #### New random questions when game restarts
 New questions are chosen randomly using random.sample. This function specifically samples without replacement, so no questions are repeated in a round.
 Code for this can be found in trivia.py.
+
+![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/final-score-restart.gif "Final Score and restart screen")
 
 ## <a name="installation"></a>Installation
 To run Trivia Trainer on your own machine:
