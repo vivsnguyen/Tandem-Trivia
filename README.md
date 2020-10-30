@@ -11,6 +11,7 @@
 * [Installation](#installation)
 * [Testing](#testing)
 * [Future Features](#future-features)
+* [Known Issues](#known-issues)
 * [Resources](#resources)
 * [Thanks](#thanks)
 
@@ -104,6 +105,9 @@ I want users to be able to save questions, view scores, and add their own questi
 
 * #### More testing
 I want to add more testing, such as integration tests for my flask server and testing for my front end features.
+
+## <a name="known-issues"></a>Known Issues
+* Users can't change their mind on the answer they choose. I wasn't sure if I wanted to include this feature, because many quiz apps (like Kahoot!) don't allow you too. This could be a future feature that can be toggled on and off. 
 
 ## <a name="resources"></a>Resources
 ### Back End
