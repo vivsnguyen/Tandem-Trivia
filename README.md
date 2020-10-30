@@ -44,6 +44,8 @@ Users click to select an answer. After selecting, the button with the correct an
 
 ![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/incorrect-answer.gif "Selecting an incorrect answer")
 Selecting an incorrect answer
+
+
 ![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/correct-answer.gif "Selecting a correct answer")
 Selecting a correct answer
 
