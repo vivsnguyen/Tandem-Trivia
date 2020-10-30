@@ -1,8 +1,8 @@
 # <img src="https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/logo.png" width="40%" alt="Trivia Trainer logo">
-
 # Trivia Trainer app
 * Tandem Software Engineer Apprenticeship Code Challenge
-* One week sprint to build and deploy
+* One week sprint to build.
+* The pdf file of full requirements can be found in the main project directory. 
 
 ## Contents
 * [Tech Stack](#tech-stack)
@@ -43,7 +43,9 @@ The current question number is always visible, so users can keep track of the cu
 Users click to select an answer. After selecting, the button with the correct answer will turn green. If an incorrect answer is selected, the selected button will turn grey. Other incorrect answer buttons will turn red.
 
 ![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/incorrect-answer.gif "Selecting an incorrect answer")
+Selecting an incorrect answer
 ![alt text](https://github.com/vivsnguyen/Tandem-Trivia/blob/main/static/images/correct-answer.gif "Selecting a correct answer")
+Selecting a correct answer
 
 #### Final score display
 After 10 questions are completed, users can view their score percentage and restart the quiz.
@@ -121,3 +123,5 @@ Test front end, javascript
 * Kap
 
 ## <a name="thanks"></a>Thanks
+
+Hi Tandem! Thanks for this opportunity and for taking the time to view my project. 
